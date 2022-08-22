@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+#define ll                 long long int
+#define vi                 vector<int>
+#define pll                pair<ll,ll>
+#define ump                unordered_map
+#define mp                 make_pair
+#define pb                 push_back
+#define ff                 first
+#define ss                 second 
+#define all(n)             n.begin(),n.end()
+#define loop(i,a,b)        for(int i = a;i <= b; i++)
+#define looprev(i,a,b)     for(i = a; i > b; i--)
+#define ps(x,y)            fixed<<setprecision(y)<<x 
+#define FIO                ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
+
+using namespace std;
+
+int main()
+{
+    FIO; 
+
+	vector<vector<int>> vect;
+	ll posx, posy;
+
+	loop(i,1,5){
+		vector<int> row;
+		loop(j,1,5){
+			ll x;
+			cin>>x;
+			row.pb(x);
+			// cout<<vect[i][j]<<" ";
+			if(x == 1){
+				posx = i, posy = j;
+			} 
+		}
+
+		vect.pb(row);
+	}
+
+	cout<<(abs(3 - posx) + abs(3 - posy))<<"\n";
+
+	return 0;
+}
